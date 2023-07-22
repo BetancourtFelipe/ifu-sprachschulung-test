@@ -23,7 +23,7 @@ const logoStyles = css`
   padding: 12px 16px;
 `;
 
-const wraperStyles = css`
+const wrapperStyles = css`
   max-width: 1248px;
   margin: auto;
 `;
@@ -71,20 +71,28 @@ const anmeldungLink = css`
   text-decoration: none;
   font-weight: 600;
   font-style: 4rem;
-  border-radius: 15px;
   font-size: 0.85rem;
+  border-radius: 15px;
 `;
 
 const mainSectionStyles = css`
   background-color: #ff6247;
   display: flex;
   justify-content: center;
-  padding: 20px;
-  margin: 30px;
+  padding: 10px 0px;
+  margin: 10px;
   border-radius: 15px;
   font-weight: 600;
   font-style: 4rem;
+  font-size: 2rem;
   color: white;
+`;
+
+const mainInfoStyles = css`
+  text-align: center;
+  font-weight: 600;
+  font-style: 4rem;
+  font-size: 0.85rem;
 `;
 
 function App() {
@@ -96,7 +104,7 @@ function App() {
             Der Deutsch Intensivkurs mit {`--->`} IFU
           </a>
         </section>
-        <div css={wraperStyles}>
+        <div css={wrapperStyles}>
           <div css={topNavigationStyles}>
             <a href="https://ifu-institut.at/">
               <img src={logo} alt="Logo" css={logoStyles} />
@@ -124,9 +132,21 @@ function App() {
       <main>
         <div>
           <section css={mainSectionStyles}>
-            <div>ifo imfo imfo</div>
+            <div>
+              <h2>Pluspunkt Deutsch: Leben in Österreich</h2>
+              <br />
+            </div>
           </section>
-          <div></div>
+          <div css={wrapperStyles}>
+            <div css={mainInfoStyles}>
+              <h3>Zusatzmaterialien</h3>
+              <p>
+                Hier finden Sie Zusatzmaterialien wie Videos oder Modelltests
+                sowie die Kurs- und Arbeitsbuch-CDs zum Lehrwerk Pluspunkt
+                Deutsch "Leben in Österreich" der Sprachniveaus A1
+              </p>
+            </div>
+          </div>
         </div>
       </main>
       <footer>footer</footer>
