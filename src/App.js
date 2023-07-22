@@ -1,7 +1,15 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from '@emotion/react';
-import audio from './audios/9783065209762_CD1_Track01.mp3';
+import audio1 from './audios/9783065209762_CD1_Track01.mp3';
+import audio2 from './audios/9783065209762_CD1_Track02.mp3';
+import audio3 from './audios/9783065209762_CD1_Track03.mp3';
+import audio4 from './audios/9783065209762_CD1_Track04.mp3';
+import audio5 from './audios/9783065209762_CD1_Track05.mp3';
+import audio6 from './audios/9783065209762_CD1_Track06.mp3';
+import audio7 from './audios/9783065209762_CD1_Track07.mp3';
+import audio8 from './audios/9783065209762_CD1_Track08.mp3';
+import image from './images/colleagues-working-together-while-sitting-cafe.jpg';
 import logo from './images/logo.webp';
 import clip1 from './videos/Clip1.mp4';
 import clip2 from './videos/Clip2.mp4';
@@ -103,8 +111,7 @@ const mainInfoStyles = css`
 const materialStyles = css`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
+  justify-content: center;
   max-width: 800px;
   margin: auto;
 `;
@@ -120,7 +127,15 @@ const materialHeaderStyles = css`
   font-weight: 600;
 `;
 
-const audioStyles = {};
+const imageStyles = css`
+  width: 20%;
+
+  height: 200px;
+`;
+
+const audioStyles = css`
+  padding: 10px;
+`;
 
 const videoStyles = css`
   padding: 10px;
@@ -182,62 +197,121 @@ function App() {
             <h1 css={materialHeaderStyles}>A1 Pluspunkt Buch Materialien</h1>
             <div css={materialStyles}>
               <div>
-                <img src="/bilder/foto.jpg" alt="Foto" />
-                <div>
-                  <h2>Materialfoto</h2>
-                  <p>Hier ist das Foto für das A1 Pluspunkt Buch.</p>
+                <h2>Materialfoto</h2>
+                <p>Hier ist das Foto für das A1 Pluspunkt Buch.</p>
+
+                <div css={imageStyles}>
+                  <img src={image} alt="students" />
                 </div>
               </div>
-
               <div css={materialBlockStyles}>
                 <h2>Audio</h2>
                 <p>Hier sind die Audios für das A1 Pluspunkt Buch - CD 1.</p>
-                <audio controls>
-                  <source src={audio} type="audio/mp3" />
-                  <track
-                    src="/captions.vtt"
-                    kind="captions"
-                    label="English Captions"
-                    srcLang="en"
-                    default
-                  />
-                  Ihr Browser unterstützt das Audio-Tag nicht.
-                </audio>
-                <audio controls>
-                  <source src="/audio/audio.mp3" type="audio/mpeg" />
-                  <track
-                    src="/captions.vtt"
-                    kind="captions"
-                    label="English Captions"
-                    srcLang="en"
-                    default
-                  />
-                  Ihr Browser unterstützt das Audio-Tag nicht.
-                </audio>
-                <audio controls>
-                  <source src="/audio/audio.mp3" type="audio/mp3" />
-                  <track
-                    src="/captions.vtt"
-                    kind="captions"
-                    label="English Captions"
-                    srcLang="en"
-                    default
-                  />
-                  Ihr Browser unterstützt das Audio-Tag nicht.
-                </audio>
-                <audio controls>
-                  <source src="/audio/audio.mp3" type="audio/mpeg" />
-                  <track
-                    src="/captions.vtt"
-                    kind="captions"
-                    label="English Captions"
-                    srcLang="en"
-                    default
-                  />
-                  Ihr Browser unterstützt das Audio-Tag nicht.
-                </audio>
+                <div css={audioStyles}>
+                  <audio controls>
+                    <source src={audio1} type="audio/mp3" />
+                    <track
+                      src="/captions.vtt"
+                      kind="captions"
+                      label="English Captions"
+                      srcLang="en"
+                      default
+                    />
+                    Ihr Browser unterstützt das Audio-Tag nicht.
+                  </audio>
+                </div>
+                <div css={audioStyles}>
+                  <audio controls>
+                    <source src={audio2} type="audio/mp3" />
+                    <track
+                      src="/captions.vtt"
+                      kind="captions"
+                      label="English Captions"
+                      srcLang="en"
+                      default
+                    />
+                    Ihr Browser unterstützt das Audio-Tag nicht.
+                  </audio>
+                </div>
+                <div css={audioStyles}>
+                  <audio controls>
+                    <source src={audio3} type="audio/mp3" />
+                    <track
+                      src="/captions.vtt"
+                      kind="captions"
+                      label="English Captions"
+                      srcLang="en"
+                      default
+                    />
+                    Ihr Browser unterstützt das Audio-Tag nicht.
+                  </audio>
+                </div>
+                <div css={audioStyles}>
+                  <audio controls>
+                    <source src={audio4} type="audio/mp3" />
+                    <track
+                      src="/captions.vtt"
+                      kind="captions"
+                      label="English Captions"
+                      srcLang="en"
+                      default
+                    />
+                    Ihr Browser unterstützt das Audio-Tag nicht.
+                  </audio>
+                </div>
+                <div css={audioStyles}>
+                  <audio controls>
+                    <source src={audio5} type="audio/mp3" />
+                    <track
+                      src="/captions.vtt"
+                      kind="captions"
+                      label="English Captions"
+                      srcLang="en"
+                      default
+                    />
+                    Ihr Browser unterstützt das Audio-Tag nicht.
+                  </audio>
+                </div>
+                <div css={audioStyles}>
+                  <audio controls>
+                    <source src={audio6} type="audio/mpeg" />
+                    <track
+                      src="/captions.vtt"
+                      kind="captions"
+                      label="English Captions"
+                      srcLang="en"
+                      default
+                    />
+                    Ihr Browser unterstützt das Audio-Tag nicht.
+                  </audio>
+                </div>
+                <div css={audioStyles}>
+                  <audio controls>
+                    <source src={audio7} type="audio/mp3" />
+                    <track
+                      src="/captions.vtt"
+                      kind="captions"
+                      label="English Captions"
+                      srcLang="en"
+                      default
+                    />
+                    Ihr Browser unterstützt das Audio-Tag nicht.
+                  </audio>
+                </div>
+                <div css={audioStyles}>
+                  <audio controls>
+                    <source src={audio8} type="audio/mpeg" />
+                    <track
+                      src="/captions.vtt"
+                      kind="captions"
+                      label="English Captions"
+                      srcLang="en"
+                      default
+                    />
+                    Ihr Browser unterstützt das Audio-Tag nicht.
+                  </audio>
+                </div>
               </div>
-
               <div css={materialBlockStyles}>
                 <h2>Video</h2>
                 <p>Hier ist das Video für das A1 Pluspunkt Buch.</p>
