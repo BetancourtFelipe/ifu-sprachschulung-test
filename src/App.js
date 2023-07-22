@@ -9,8 +9,9 @@ import audio5 from './audios/9783065209762_CD1_Track05.mp3';
 import audio6 from './audios/9783065209762_CD1_Track06.mp3';
 import audio7 from './audios/9783065209762_CD1_Track07.mp3';
 import audio8 from './audios/9783065209762_CD1_Track08.mp3';
-import image from './images/colleagues-working-together-while-sitting-cafe.jpg';
+import image1 from './images/colleagues-working-together-while-sitting-cafe.jpg';
 import logo from './images/logo.webp';
+import image2 from './images/student-sharing-her-knowledge-with-her-colleagues.jpg';
 import clip1 from './videos/Clip1.mp4';
 import clip2 from './videos/Clip2.mp4';
 import clip3 from './videos/Clip3.mp4';
@@ -201,7 +202,11 @@ function App() {
                 <p>Hier ist das Foto für das A1 Pluspunkt Buch.</p>
 
                 <div css={imageStyles}>
-                  <img src={image} alt="students" />
+                  <img src={image1} alt="students" />
+                </div>
+                <br />
+                <div css={imageStyles}>
+                  <img src={image2} alt="students" />
                 </div>
               </div>
               <div css={materialBlockStyles}>
