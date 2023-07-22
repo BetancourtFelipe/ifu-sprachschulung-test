@@ -1,7 +1,12 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from '@emotion/react';
+import audio from './audios/9783065209762_CD1_Track01.mp3';
 import logo from './images/logo.webp';
+import clip1 from './videos/Clip1.mp4';
+import clip2 from './videos/Clip2.mp4';
+import clip3 from './videos/Clip3.mp4';
+import clip4 from './videos/Clip4.mp4';
 
 const bannerSectionStyles = css`
   background-color: tomato;
@@ -95,6 +100,32 @@ const mainInfoStyles = css`
   font-size: 0.85rem;
 `;
 
+const materialStyles = css`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 800px;
+  margin: auto;
+`;
+
+const materialBlockStyles = css`
+  padding: 20px;
+  margin-bottom: 30px; /* Increase margin to add more space between material blocks */
+  gap: 50px;
+`;
+
+const materialHeaderStyles = css`
+  text-align: center;
+  font-weight: 600;
+`;
+
+const audioStyles = {};
+
+const videoStyles = css`
+  padding: 10px;
+`;
+
 function App() {
   return (
     <>
@@ -145,6 +176,141 @@ function App() {
                 sowie die Kurs- und Arbeitsbuch-CDs zum Lehrwerk Pluspunkt
                 Deutsch "Leben in Österreich" der Sprachniveaus A1
               </p>
+            </div>
+          </div>
+          <div>
+            <h1 css={materialHeaderStyles}>A1 Pluspunkt Buch Materialien</h1>
+            <div css={materialStyles}>
+              <div>
+                <img src="/bilder/foto.jpg" alt="Foto" />
+                <div>
+                  <h2>Materialfoto</h2>
+                  <p>Hier ist das Foto für das A1 Pluspunkt Buch.</p>
+                </div>
+              </div>
+
+              <div css={materialBlockStyles}>
+                <h2>Audio</h2>
+                <p>Hier sind die Audios für das A1 Pluspunkt Buch - CD 1.</p>
+                <audio controls>
+                  <source src={audio} type="audio/mp3" />
+                  <track
+                    src="/captions.vtt"
+                    kind="captions"
+                    label="English Captions"
+                    srcLang="en"
+                    default
+                  />
+                  Ihr Browser unterstützt das Audio-Tag nicht.
+                </audio>
+                <audio controls>
+                  <source src="/audio/audio.mp3" type="audio/mpeg" />
+                  <track
+                    src="/captions.vtt"
+                    kind="captions"
+                    label="English Captions"
+                    srcLang="en"
+                    default
+                  />
+                  Ihr Browser unterstützt das Audio-Tag nicht.
+                </audio>
+                <audio controls>
+                  <source src="/audio/audio.mp3" type="audio/mp3" />
+                  <track
+                    src="/captions.vtt"
+                    kind="captions"
+                    label="English Captions"
+                    srcLang="en"
+                    default
+                  />
+                  Ihr Browser unterstützt das Audio-Tag nicht.
+                </audio>
+                <audio controls>
+                  <source src="/audio/audio.mp3" type="audio/mpeg" />
+                  <track
+                    src="/captions.vtt"
+                    kind="captions"
+                    label="English Captions"
+                    srcLang="en"
+                    default
+                  />
+                  Ihr Browser unterstützt das Audio-Tag nicht.
+                </audio>
+              </div>
+
+              <div css={materialBlockStyles}>
+                <h2>Video</h2>
+                <p>Hier ist das Video für das A1 Pluspunkt Buch.</p>
+                <div css={videoStyles}>
+                  <video controls>
+                    <source src={clip1} type="video/mp4" />
+                    <track
+                      src="/captions.vtt"
+                      kind="captions"
+                      label="English Captions"
+                      srcLang="en"
+                      default
+                    />
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                  </video>
+                </div>
+                <div css={videoStyles}>
+                  <video controls>
+                    <source src={clip2} type="video/mp4" />
+                    <track
+                      src="/captions.vtt"
+                      kind="captions"
+                      label="English Captions"
+                      srcLang="en"
+                      default
+                    />
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                  </video>
+                </div>
+                <div css={videoStyles}>
+                  <video controls>
+                    <source src={clip3} type="video/mp4" />
+                    <track
+                      src="/captions.vtt"
+                      kind="captions"
+                      label="English Captions"
+                      srcLang="en"
+                      default
+                    />
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                  </video>
+                </div>
+                <div css={videoStyles}>
+                  <video controls>
+                    <source src={clip4} type="video/mp4" />
+                    <track
+                      src="/captions.vtt"
+                      kind="captions"
+                      label="English Captions"
+                      srcLang="en"
+                      default
+                    />
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                  </video>
+                </div>
+              </div>
+
+              <div>
+                <h2>Schülerinformationen</h2>
+                <div>
+                  <p>
+                    Hier finden Sie Informationen für SchülerInnen zum A1
+                    Pluspunkt Buch.
+                  </p>
+                  <p>
+                    Laden Sie{' '}
+                    <a href="/infos.txt" download>
+                      hier
+                    </a>{' '}
+                    die Schülerinformationen herunter.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
