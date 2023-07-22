@@ -11,7 +11,7 @@ root.render(
       styles={css`
         body {
           margin: 0;
-          font-family: sans-serif;
+          font-family: 'Nunito Sans', sans-serif;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }

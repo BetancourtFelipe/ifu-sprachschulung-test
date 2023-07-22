@@ -1,27 +1,69 @@
-export default function App() {
+/** @jsxImportSource @emotion/react */
+
+import { css } from '@emotion/react';
+
+const bannerSectionStyles = css`
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+`;
+
+const wraperStyles = css`
+  max-width: 1248px;
+  margin: auto;
+`;
+
+const topNavigationStyles = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <section>
-          <div>
-            <div>info tel usw</div>
-          </div>
+    <>
+      <header>
+        <section css={bannerSectionStyles}>
+          <a href="/">Der Deutsch Intensivkurs mit {`--->`} IFU</a>
         </section>
-        <div>
-          <div>
+        <div css={wraperStyles}>
+          <div css={topNavigationStyles}>
+            <div>logo</div>
             <nav>
-              <a>IFU</a>
-              <a>Kontakt</a>
+              <ul>
+                <li>
+                  <a href="/">IFU</a>
+                </li>
+                <li>
+                  <a href="/">Bücher</a>
+                </li>
+                <li>
+                  <a href="/">hörbücher</a>
+                </li>
+                <li>
+                  <a href="/">videos</a>
+                </li>
+                <li>
+                  <a href="/">IFU</a>
+                </li>
+              </ul>
             </nav>
+            <div>
+              <a href="/">anmelden</a>
+            </div>
           </div>
         </div>
-        <main>
-          <div>
-            <div>MAIN</div>
-          </div>
-        </main>
       </header>
+      <main>main</main>
       <footer>footer</footer>
-    </div>
+    </>
   );
 }
+
+export default App;
