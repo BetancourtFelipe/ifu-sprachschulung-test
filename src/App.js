@@ -117,12 +117,6 @@ const materialStyles = css`
   margin: auto;
 `;
 
-// const materialBlockStyles = css`
-//   padding: 20px;
-//   margin-bottom: 30px;
-//   margin-right: 50px;
-// `;
-
 const materialHeaderStyles = css`
   text-align: center;
   font-weight: 600;
@@ -134,6 +128,7 @@ const imageContainer = css`
   justify-content: center;
   gap: 50px;
   padding: 15px 12px;
+  height: 200px;
 `;
 
 const imageStyles = css`
@@ -145,13 +140,36 @@ const imageStyles = css`
 const audioInfoContainer = css`
   display: flex;
   justify-content: space-between;
+  font-weight: 600;
+  font-style: 4rem;
+  font-size: 0.85rem;
+`;
+
+const infoContainer = css`
+  width: 500px;
+  padding-top: 150px;
+  padding-bottom: 250px;
+  font-weight: 600;
+  font-style: 4rem;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: last baseline;
+`;
+
+const infoImageStyles = css`
+  border: 1px solid gray;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
 `;
 
 const audioContainer = css`
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 330px;
   gap: 30px;
+  padding-top: 25px;
 `;
 
 const audioStyles = css`
@@ -161,12 +179,18 @@ const audioStyles = css`
   border-radius: 15px;
 `;
 
-const infoContainer = css`
-  width: 300px;
+const videoBlockStyles = css`
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  width: auto;
 `;
 
 const videoStyles = css`
-  padding: 10px;
+  border: solid 1px tomato;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 480px;
 `;
 
 function App() {
@@ -236,45 +260,58 @@ function App() {
           <div css={materialStyles}>
             <div>
               <div>
-                <h2>Audio</h2>
-                <p>
-                  Hier sind die Audios für das A1 Pluspunkt Buch - CD 1. / 1-8
-                </p>
                 <div css={audioInfoContainer}>
                   <div css={infoContainer}>
-                    <div>
+                    <div css={infoImageStyles}>
                       <img src={image3} alt="book" />
                     </div>
                     <div>
+                      <br />
+                      <br /> <br />
+                      <br /> <br />
+                      <br />
                       <h3>Kursbuch mit Video-Episoden als MP4-Download</h3>
+                      <br /> <br />
                       <p>
                         Das Kursbuch zu Pluspunkt Deutsch A1. Leben in
                         Österreich. enthält vierzehn Lektionen sowie vier
-                        fakultative Stationen. Im Vordergrund stehen Themen des
-                        alltäglichen Lebens und ihre sprachliche Bewältigung.
+                        fakultative Stationen.
+                        <br /> Im Vordergrund stehen Themen des alltäglichen
+                        Lebens und ihre sprachliche Bewältigung.
                         <br /> <br />
                         Jede Lektion enthält eine Doppelseite Sprechen aktiv mit
-                        Sprechübungen zur Automatisierung. Die abschließende
-                        Seite Gewusst wie fasst die wichtigsten Redemittel und
-                        grammatischen Strukturen übersichtlich zusammen. Die
-                        fakultativen zweiseitigen Stationen bieten eine
-                        spielerische Wiederholung des Gelernten. <br /> <br />
+                        Sprechübungen zur Automatisierung.
+                        <br /> Die abschließende Seite Gewusst wie fasst die
+                        wichtigsten Redemittel und grammatischen Strukturen
+                        übersichtlich zusammen.
+                        <br /> Die fakultativen zweiseitigen Stationen bieten
+                        eine spielerische Wiederholung des Gelernten. <br />
+                        <br />
+                        <br />
+                        <br />
                         Im Anhang des Kursbuches finden Sie: <br />
                         <br />
-                        Seiten zu Regeln und Werte, auf die innerhalb einer
-                        Lektion verwiesen wird Phonetikübungen, die den
-                        einzelnen Lektionen zugeordnet sind
                         <br />
+                        <em>
+                          Seiten zu Regeln und Werte, auf die innerhalb einer
+                          Lektion verwiesen wird <br />
+                          <br /> Phonetikübungen, die den einzelnen Lektionen
+                          zugeordnet sind
+                          <br />
+                          <br />
+                          Videoseiten für die vertiefende Arbeit mit den
+                          vierzehn Videoclips
+                          <br />
+                          <br />
+                          einen Modelltest
+                          <br />
+                          <br /> die Hörtexte, die alphabetische Wortliste
+                          <br />
+                          <br />
+                          sowie eine Liste der unregelmäßigen Verben
+                        </em>
+                        <br /> <br />
                         <br />
-                        Videoseiten für die vertiefende Arbeit mit den vierzehn
-                        Videoclips
-                        <br />
-                        <br />
-                        einen Modelltest die Hörtexte, die alphabetische
-                        Wortliste
-                        <br />
-                        <br />
-                        sowie eine Liste der unregelmäßigen Verben <br />
                         <br /> Die Videos zeigen in humorvollen Szenen
                         Alltagssituationen in Österreich.
                         <br /> Sie können sowohl im Unterricht als auch in
@@ -283,6 +320,11 @@ function App() {
                     </div>
                   </div>
                   <div css={audioContainer}>
+                    <h2>Audio</h2>
+                    <p>
+                      Hier sind die Audios für das A1 Pluspunkt Buch <br />
+                      <br /> CD 1. / 1-8
+                    </p>
                     <div css={audioStyles}>
                       <p>1/8</p>
                       <audio controls>
@@ -401,57 +443,59 @@ function App() {
               <div>
                 <h2>Video</h2>
                 <p>Hier ist das Video für das A1 Pluspunkt Buch.</p>
-                <div css={videoStyles}>
-                  <video controls>
-                    <source src={clip1} type="video/mp4" />
-                    <track
-                      src="/captions.vtt"
-                      kind="captions"
-                      label="English Captions"
-                      srcLang="en"
-                      default
-                    />
-                    Ihr Browser unterstützt das Video-Tag nicht.
-                  </video>
-                </div>
-                <div css={videoStyles}>
-                  <video controls>
-                    <source src={clip2} type="video/mp4" />
-                    <track
-                      src="/captions.vtt"
-                      kind="captions"
-                      label="English Captions"
-                      srcLang="en"
-                      default
-                    />
-                    Ihr Browser unterstützt das Video-Tag nicht.
-                  </video>
-                </div>
-                <div css={videoStyles}>
-                  <video controls>
-                    <source src={clip3} type="video/mp4" />
-                    <track
-                      src="/captions.vtt"
-                      kind="captions"
-                      label="English Captions"
-                      srcLang="en"
-                      default
-                    />
-                    Ihr Browser unterstützt das Video-Tag nicht.
-                  </video>
-                </div>
-                <div css={videoStyles}>
-                  <video controls>
-                    <source src={clip4} type="video/mp4" />
-                    <track
-                      src="/captions.vtt"
-                      kind="captions"
-                      label="English Captions"
-                      srcLang="en"
-                      default
-                    />
-                    Ihr Browser unterstützt das Video-Tag nicht.
-                  </video>
+                <div css={videoBlockStyles}>
+                  <div css={videoStyles}>
+                    <video controls>
+                      <source src={clip1} type="video/mp4" />
+                      <track
+                        src="/captions.vtt"
+                        kind="captions"
+                        label="English Captions"
+                        srcLang="en"
+                        default
+                      />
+                      Ihr Browser unterstützt das Video-Tag nicht.
+                    </video>
+                  </div>
+                  <div css={videoStyles}>
+                    <video controls>
+                      <source src={clip2} type="video/mp4" />
+                      <track
+                        src="/captions.vtt"
+                        kind="captions"
+                        label="English Captions"
+                        srcLang="en"
+                        default
+                      />
+                      Ihr Browser unterstützt das Video-Tag nicht.
+                    </video>
+                  </div>
+                  <div css={videoStyles}>
+                    <video controls>
+                      <source src={clip3} type="video/mp4" />
+                      <track
+                        src="/captions.vtt"
+                        kind="captions"
+                        label="English Captions"
+                        srcLang="en"
+                        default
+                      />
+                      Ihr Browser unterstützt das Video-Tag nicht.
+                    </video>
+                  </div>
+                  <div css={videoStyles}>
+                    <video controls>
+                      <source src={clip4} type="video/mp4" />
+                      <track
+                        src="/captions.vtt"
+                        kind="captions"
+                        label="English Captions"
+                        srcLang="en"
+                        default
+                      />
+                      Ihr Browser unterstützt das Video-Tag nicht.
+                    </video>
+                  </div>
                 </div>
               </div>
 
