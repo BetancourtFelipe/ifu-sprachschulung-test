@@ -9,6 +9,7 @@ import audio5 from './audios/9783065209762_CD1_Track05.mp3';
 import audio6 from './audios/9783065209762_CD1_Track06.mp3';
 import audio7 from './audios/9783065209762_CD1_Track07.mp3';
 import audio8 from './audios/9783065209762_CD1_Track08.mp3';
+import image3 from './images/978-3-06-520973-1.webp';
 import image1 from './images/colleagues-working-together-while-sitting-cafe.jpg';
 import logo from './images/logo.webp';
 import image2 from './images/student-sharing-her-knowledge-with-her-colleagues.jpg';
@@ -112,30 +113,56 @@ const mainInfoStyles = css`
 const materialStyles = css`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   max-width: 800px;
   margin: auto;
 `;
 
-const materialBlockStyles = css`
-  padding: 20px;
-  margin-bottom: 30px; /* Increase margin to add more space between material blocks */
-  gap: 50px;
-`;
+// const materialBlockStyles = css`
+//   padding: 20px;
+//   margin-bottom: 30px;
+//   margin-right: 50px;
+// `;
 
 const materialHeaderStyles = css`
   text-align: center;
   font-weight: 600;
+  padding-top: 40px;
+`;
+
+const imageContainer = css`
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 15px 12px;
 `;
 
 const imageStyles = css`
   width: 20%;
-
+  padding: 0px;
   height: 200px;
+`;
+
+const audioInfoContainer = css`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const audioContainer = css`
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 30px;
 `;
 
 const audioStyles = css`
   padding: 10px;
+  width: 330px;
+  border: 1px solid tomato;
+  border-radius: 15px;
+`;
+
+const infoContainer = css`
+  width: 300px;
 `;
 
 const videoStyles = css`
@@ -194,130 +221,184 @@ function App() {
               </p>
             </div>
           </div>
-          <div>
-            <h1 css={materialHeaderStyles}>A1 Pluspunkt Buch Materialien</h1>
-            <div css={materialStyles}>
+        </div>
+        <div css={imageContainer}>
+          <div css={imageStyles}>
+            <img src={image1} alt="students" />
+          </div>
+          <br />
+          <div css={imageStyles}>
+            <img src={image2} alt="students" />
+          </div>
+        </div>
+        <div>
+          <h1 css={materialHeaderStyles}>A1 Pluspunkt Buch Materialien</h1>
+          <div css={materialStyles}>
+            <div>
               <div>
-                <h2>Materialfoto</h2>
-                <p>Hier ist das Foto für das A1 Pluspunkt Buch.</p>
-
-                <div css={imageStyles}>
-                  <img src={image1} alt="students" />
-                </div>
-                <br />
-                <div css={imageStyles}>
-                  <img src={image2} alt="students" />
-                </div>
-              </div>
-              <div css={materialBlockStyles}>
                 <h2>Audio</h2>
-                <p>Hier sind die Audios für das A1 Pluspunkt Buch - CD 1.</p>
-                <div css={audioStyles}>
-                  <audio controls>
-                    <source src={audio1} type="audio/mp3" />
-                    <track
-                      src="/captions.vtt"
-                      kind="captions"
-                      label="English Captions"
-                      srcLang="en"
-                      default
-                    />
-                    Ihr Browser unterstützt das Audio-Tag nicht.
-                  </audio>
-                </div>
-                <div css={audioStyles}>
-                  <audio controls>
-                    <source src={audio2} type="audio/mp3" />
-                    <track
-                      src="/captions.vtt"
-                      kind="captions"
-                      label="English Captions"
-                      srcLang="en"
-                      default
-                    />
-                    Ihr Browser unterstützt das Audio-Tag nicht.
-                  </audio>
-                </div>
-                <div css={audioStyles}>
-                  <audio controls>
-                    <source src={audio3} type="audio/mp3" />
-                    <track
-                      src="/captions.vtt"
-                      kind="captions"
-                      label="English Captions"
-                      srcLang="en"
-                      default
-                    />
-                    Ihr Browser unterstützt das Audio-Tag nicht.
-                  </audio>
-                </div>
-                <div css={audioStyles}>
-                  <audio controls>
-                    <source src={audio4} type="audio/mp3" />
-                    <track
-                      src="/captions.vtt"
-                      kind="captions"
-                      label="English Captions"
-                      srcLang="en"
-                      default
-                    />
-                    Ihr Browser unterstützt das Audio-Tag nicht.
-                  </audio>
-                </div>
-                <div css={audioStyles}>
-                  <audio controls>
-                    <source src={audio5} type="audio/mp3" />
-                    <track
-                      src="/captions.vtt"
-                      kind="captions"
-                      label="English Captions"
-                      srcLang="en"
-                      default
-                    />
-                    Ihr Browser unterstützt das Audio-Tag nicht.
-                  </audio>
-                </div>
-                <div css={audioStyles}>
-                  <audio controls>
-                    <source src={audio6} type="audio/mpeg" />
-                    <track
-                      src="/captions.vtt"
-                      kind="captions"
-                      label="English Captions"
-                      srcLang="en"
-                      default
-                    />
-                    Ihr Browser unterstützt das Audio-Tag nicht.
-                  </audio>
-                </div>
-                <div css={audioStyles}>
-                  <audio controls>
-                    <source src={audio7} type="audio/mp3" />
-                    <track
-                      src="/captions.vtt"
-                      kind="captions"
-                      label="English Captions"
-                      srcLang="en"
-                      default
-                    />
-                    Ihr Browser unterstützt das Audio-Tag nicht.
-                  </audio>
-                </div>
-                <div css={audioStyles}>
-                  <audio controls>
-                    <source src={audio8} type="audio/mpeg" />
-                    <track
-                      src="/captions.vtt"
-                      kind="captions"
-                      label="English Captions"
-                      srcLang="en"
-                      default
-                    />
-                    Ihr Browser unterstützt das Audio-Tag nicht.
-                  </audio>
+                <p>
+                  Hier sind die Audios für das A1 Pluspunkt Buch - CD 1. / 1-8
+                </p>
+                <div css={audioInfoContainer}>
+                  <div css={infoContainer}>
+                    <div>
+                      <img src={image3} alt="book" />
+                    </div>
+                    <div>
+                      <h3>Kursbuch mit Video-Episoden als MP4-Download</h3>
+                      <p>
+                        Das Kursbuch zu Pluspunkt Deutsch A1. Leben in
+                        Österreich. enthält vierzehn Lektionen sowie vier
+                        fakultative Stationen. Im Vordergrund stehen Themen des
+                        alltäglichen Lebens und ihre sprachliche Bewältigung.
+                        <br /> <br />
+                        Jede Lektion enthält eine Doppelseite Sprechen aktiv mit
+                        Sprechübungen zur Automatisierung. Die abschließende
+                        Seite Gewusst wie fasst die wichtigsten Redemittel und
+                        grammatischen Strukturen übersichtlich zusammen. Die
+                        fakultativen zweiseitigen Stationen bieten eine
+                        spielerische Wiederholung des Gelernten. <br /> <br />
+                        Im Anhang des Kursbuches finden Sie: <br />
+                        <br />
+                        Seiten zu Regeln und Werte, auf die innerhalb einer
+                        Lektion verwiesen wird Phonetikübungen, die den
+                        einzelnen Lektionen zugeordnet sind
+                        <br />
+                        <br />
+                        Videoseiten für die vertiefende Arbeit mit den vierzehn
+                        Videoclips
+                        <br />
+                        <br />
+                        einen Modelltest die Hörtexte, die alphabetische
+                        Wortliste
+                        <br />
+                        <br />
+                        sowie eine Liste der unregelmäßigen Verben <br />
+                        <br /> Die Videos zeigen in humorvollen Szenen
+                        Alltagssituationen in Österreich.
+                        <br /> Sie können sowohl im Unterricht als auch in
+                        Selbstlernphasen eingesetzt werden.
+                      </p>
+                    </div>
+                  </div>
+                  <div css={audioContainer}>
+                    <div css={audioStyles}>
+                      <p>1/8</p>
+                      <audio controls>
+                        <source src={audio1} type="audio/mp3" />
+                        <track
+                          src="/captions.vtt"
+                          kind="captions"
+                          label="English Captions"
+                          srcLang="en"
+                          default
+                        />
+                        Ihr Browser unterstützt das Audio-Tag nicht.
+                      </audio>
+                    </div>
+                    <div css={audioStyles}>
+                      <p>2/8</p>
+                      <audio controls>
+                        <source src={audio2} type="audio/mp3" />
+                        <track
+                          src="/captions.vtt"
+                          kind="captions"
+                          label="English Captions"
+                          srcLang="en"
+                          default
+                        />
+                        Ihr Browser unterstützt das Audio-Tag nicht.
+                      </audio>
+                    </div>
+                    <div css={audioStyles}>
+                      <p>3/8</p>
+                      <audio controls>
+                        <source src={audio3} type="audio/mp3" />
+                        <track
+                          src="/captions.vtt"
+                          kind="captions"
+                          label="English Captions"
+                          srcLang="en"
+                          default
+                        />
+                        Ihr Browser unterstützt das Audio-Tag nicht.
+                      </audio>
+                    </div>
+                    <div css={audioStyles}>
+                      <p>4/8</p>
+                      <audio controls>
+                        <source src={audio4} type="audio/mp3" />
+                        <track
+                          src="/captions.vtt"
+                          kind="captions"
+                          label="English Captions"
+                          srcLang="en"
+                          default
+                        />
+                        Ihr Browser unterstützt das Audio-Tag nicht.
+                      </audio>
+                    </div>
+                    <div css={audioStyles}>
+                      <p>5/8</p>
+                      <audio controls>
+                        <source src={audio5} type="audio/mp3" />
+                        <track
+                          src="/captions.vtt"
+                          kind="captions"
+                          label="English Captions"
+                          srcLang="en"
+                          default
+                        />
+                        Ihr Browser unterstützt das Audio-Tag nicht.
+                      </audio>
+                    </div>
+                    <div css={audioStyles}>
+                      <p>6/8</p>
+                      <audio controls>
+                        <source src={audio6} type="audio/mp3" />
+                        <track
+                          src="/captions.vtt"
+                          kind="captions"
+                          label="English Captions"
+                          srcLang="en"
+                          default
+                        />
+                        Ihr Browser unterstützt das Audio-Tag nicht.
+                      </audio>
+                    </div>
+                    <div css={audioStyles}>
+                      <p>7/8</p>
+                      <audio controls>
+                        <source src={audio7} type="audio/mp3" />
+                        <track
+                          src="/captions.vtt"
+                          kind="captions"
+                          label="English Captions"
+                          srcLang="en"
+                          default
+                        />
+                        Ihr Browser unterstützt das Audio-Tag nicht.
+                      </audio>
+                    </div>
+                    <div css={audioStyles}>
+                      <p>8/8</p>
+                      <audio controls>
+                        <source src={audio8} type="audio/mp3" />
+                        <track
+                          src="/captions.vtt"
+                          kind="captions"
+                          label="English Captions"
+                          srcLang="en"
+                          default
+                        />
+                        Ihr Browser unterstützt das Audio-Tag nicht.
+                      </audio>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div css={materialBlockStyles}>
+              <div>
                 <h2>Video</h2>
                 <p>Hier ist das Video für das A1 Pluspunkt Buch.</p>
                 <div css={videoStyles}>
